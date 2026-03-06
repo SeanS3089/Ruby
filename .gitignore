@@ -1,0 +1,93 @@
+# ------------------------------------------------------------
+# PYTHON BASICS
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+env/
+venv/
+.venv/
+*.env
+
+# Bytecode cache
+*.cache/
+.pytest_cache/
+
+# ------------------------------------------------------------
+# OS / EDITOR FILES
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------------------------------------------------
+# BUILD / DISTRIBUTION ARTIFACTS
+# ------------------------------------------------------------
+build/
+dist/
+*.spec
+*.egg-info/
+*.egg
+*.whl
+
+# PyInstaller / cx_Freeze / MSI outputs
+*.manifest
+*.dll
+*.msi
+*.exe
+
+# ------------------------------------------------------------
+# RUNTIME FILES (DO NOT COMMIT)
+# ------------------------------------------------------------
+# Local app data (Windows)
+# These are created at runtime and contain sensitive info
+# such as license.lock, trial.lock, config.json
+# They live in %APPDATA%/Ruby, but we ignore them globally
+config.json
+license.lock
+trial.lock
+
+# Any accidental local copies
+*.lock
+
+# ------------------------------------------------------------
+# LOGS / TEMP FILES
+# ------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+
+# ------------------------------------------------------------
+# DATA / API / SECRETS
+# ------------------------------------------------------------
+# Alpha Vantage keys or any future API keys
+*.key
+*.token
+*.secret
+secrets.json
+
+# ------------------------------------------------------------
+# PROJECT-SPECIFIC (RUBY)
+# ------------------------------------------------------------
+# Screenshots folder is allowed, but ignore raw captures
+raw_screenshots/
+*.psd
+*.xcf
+
+# Ignore local settings or theme overrides
+settings.json
+theme.json
+
+# ------------------------------------------------------------
+# OPTIONAL: SAFE PUBLIC CODE ONLY
+# ------------------------------------------------------------
+# If you include a src/ skeleton, ignore private engine files
+src/private/
+src/internal/

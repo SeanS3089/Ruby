@@ -1,0 +1,74 @@
+# Changelog
+All notable changes to Ruby Market Scanner are documented here.
+
+## [1.4.8] – 2026-03-06
+### Improved
+- Finalized stable GUI layout with responsive chart area
+- Refined theme switching and color palette consistency
+- Improved installer activation flow and error handling
+- Enhanced chart resizing logic for smoother redraws
+- Updated README, LICENSE, and public documentation for GitHub release
+
+### Added
+- Public screenshots and architecture documentation
+- Clean proprietary license under Oly Bee Co LLC
+- .gitignore tailored for proprietary Windows Python apps
+
+---
+
+## [1.4.0 – 1.4.7] – 2026
+### Added
+- New indicator overlays (RSI, MACD, ATR, Bollinger Bands)
+- Volume bar rendering with theme-aware colors
+- Last‑N‑candles windowing system for TradingView‑style clarity
+- Local trial system with expiration
+- Machine‑bound license lock file
+- Start Menu integration via Windows installer
+
+### Improved
+- Chart rendering speed and stability
+- Data parsing and normalization from Alpha Vantage
+- Error messages and user-facing prompts
+- Window geometry persistence and theme memory
+
+---
+
+## [1.3.x] – 2026
+### Added
+- Full light/dark theme system
+- Modular overlay architecture
+- Config.json loader with validation
+- Initial licensing and activation workflow
+
+### Improved
+- GUI layout structure (control panel + chart canvas)
+- Matplotlib embedding and redraw logic
+- Symbol input handling and refresh flow
+
+---
+
+## [1.2.x] – 2026
+### Added
+- First stable candlestick renderer
+- Basic OHLCV data pipeline
+- Initial Tkinter interface with core controls
+
+### Improved
+- Data caching and error handling
+- Chart scaling and axis formatting
+
+---
+
+## [1.1.x] – 2026
+### Added
+- Early prototype GUI
+- Basic Alpha Vantage integration
+- Initial project structure and module layout
+
+---
+
+## [1.0.0] – 2026
+### Added
+- Initial internal release of Ruby Market Scanner
+- Core concept: lightweight, Windows-native Python charting tool
+- Early chart renderer and data fetcher

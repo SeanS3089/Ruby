@@ -1,0 +1,85 @@
+Ruby Market Scanner – Proprietary Software License Agreement
+Copyright © 2026 Oly Bee Co LLC
+All Rights Reserved
+This Software License Agreement (“Agreement”) is a legal contract between you (“Licensee”) and Oly Bee Co LLC (“Licensor”) governing the installation and use of the software product known as Ruby Market Scanner (“Software”). By installing, activating, or using the Software, you acknowledge that you have read, understood, and agree to be bound by the terms of this Agreement.
+
+1. GRANT OF LICENSE
+Subject to full compliance with this Agreement and payment of all applicable fees, Licensor grants Licensee a limited, non‑exclusive, non‑transferable, revocable license to install and use the Software solely for personal or internal business purposes.
+Use of the Software requires a valid license key issued by Licensor. Trial access, if provided, is temporary and may be modified or revoked at any time.
+
+2. PROHIBITED ACTIONS
+Except where expressly permitted in writing by Licensor, Licensee shall NOT:
+- use the Software without purchasing a valid license key
+- bypass, modify, disable, or interfere with license verification
+- reverse engineer, decompile, disassemble, or attempt to derive source code
+- modify, alter, translate, or create derivative works
+- distribute, publish, sublicense, sell, rent, lease, loan, or otherwise transfer the Software
+- share, disclose, or publish any license key or activation file
+- use the Software to provide services to third parties, including trading signals, automation, or analysis, without a commercial agreement
+- use the Software in any manner that competes with Licensor’s business
+Any unauthorized use immediately terminates this license.
+
+3. OWNERSHIP AND INTELLECTUAL PROPERTY
+The Software is licensed, not sold.
+All rights, title, and interest in and to the Software—including all code, algorithms, data structures, documentation, and design—remain the exclusive property of Oly Bee Co LLC.
+No rights are granted except those expressly stated in this Agreement.
+
+4. LICENSE VERIFICATION AND DATA
+The Software may use local files or other mechanisms to verify license status.
+Licensee agrees not to tamper with, modify, delete, or interfere with these mechanisms.
+Licensor does not collect personal data through the Software except as required for licensing or activation.
+
+5. UPDATES AND MODIFICATIONS
+Licensor may provide updates, patches, or modifications at its sole discretion.
+Such updates are governed by this Agreement unless accompanied by a separate license.
+Licensor is under no obligation to provide updates or support.
+
+6. TERMINATION
+This Agreement terminates automatically if Licensee:
+- violates any term of this Agreement
+- attempts to circumvent licensing
+- engages in unauthorized distribution or commercial use
+Upon termination, Licensee must immediately:
+- cease all use of the Software
+- delete all copies of the Software and related files
+- destroy any license keys or activation materials
+No refunds will be issued.
+
+7. DISCLAIMER OF WARRANTY
+The Software is provided “AS IS”, without warranty of any kind, express or implied, including but not limited to:
+- merchantability
+- fitness for a particular purpose
+- accuracy or reliability of market data
+- suitability for trading or financial decisions
+Licensee assumes all risk associated with the use of the Software.
+
+8. LIMITATION OF LIABILITY
+To the maximum extent permitted by law, Licensor shall not be liable for:
+- trading losses
+- financial damages
+- lost profits
+- data loss
+- business interruption
+- indirect, incidental, or consequential damages
+Licensor’s total liability shall not exceed the amount paid for the Software.
+
+9. COMMERCIAL USE
+Any commercial use—including but not limited to:
+- trading services
+- signal services
+- automated trading
+- consulting
+- resale
+- bundling with other products
+requires a separate written agreement with Oly Bee Co LLC.
+Unauthorized commercial use is strictly prohibited.
+
+10. GOVERNING LAW
+This Agreement is governed by the laws of the State of Washington, without regard to conflict‑of‑law principles.
+Any disputes shall be resolved exclusively in the state or federal courts located in Washington.
+
+11. ENTIRE AGREEMENT
+This Agreement constitutes the entire agreement between the parties and supersedes all prior understandings, whether written or oral.
+
+ACCEPTANCE
+By installing, activating, or using Ruby Market Scanner, Licensee acknowledges acceptance of this Agreement in full.
