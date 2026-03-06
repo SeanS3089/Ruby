@@ -97,17 +97,6 @@ Once activated, Ruby launches normally from the Start Menu.
 |            (%APPDATA% storage, theme, settings)           |
 +-----------------------------------------------------------+
 
-## Screenshots
-
-### Main Interface
-![Ruby Main GUI](screenshots/Ruby_Light_Theme.png)
-
-### Dark Theme
-![Ruby Dark Theme](screenshots/Ruby_Dark_Theme.png)
-
-### Indicators Enabled
-![Ruby Indicators](screenshots/Ruby_Dark_Theme_Indicators_Toggled.png)
-
 
 ## 🔒 Licensing
 
@@ -134,7 +123,7 @@ The full commercial version of Ruby is available through Sean Scott.
 
 About the Author
 
-Ruby is developed by **Sean**, specializing in:
+Ruby is developed by **Oly Bee Co LLC**, specializing in:
 
 - Python development  
 - Data and charting tools  
@@ -150,5 +139,5 @@ Contact
 
 For licensing or collaboration inquiries:
 
-**Sean Scott**  
+**Oly Bee Co LLC**  
 Email: scarletprogramming@outlook.com
