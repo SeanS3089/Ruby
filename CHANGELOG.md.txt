@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to Ruby Market Scanner are documented here.
 
+
+## [1.4.9] – 2026-03-06
+### Fixed
+= License issue leading to indefinite license validation
+
+
 ## [1.4.8] – 2026-03-06
 ### Improved
 - Finalized stable GUI layout with responsive chart area
