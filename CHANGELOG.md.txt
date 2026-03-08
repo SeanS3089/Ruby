@@ -2,6 +2,12 @@
 All notable changes to Ruby Market Scanner are documented here.
 
 
+## [1.5.2] – 2026-03-06
+### Fixed
+= Bollinger Band visibility
+
+
+
 ## [1.4.9] – 2026-03-06
 ### Fixed
 = License issue leading to indefinite license validation
