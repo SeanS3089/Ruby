@@ -2,6 +2,10 @@
 All notable changes to Ruby Market Scanner are documented here.
 
 
+### [1.5.3] - 2026-03-09
+### Upgraded
+= Created a premium copy of Ruby that adds a market scanning option for people who choose to pay for the alpha vantage api calls
+
 ## [1.5.2] – 2026-03-08
 ### Fixed
 = Bollinger Band visibility
