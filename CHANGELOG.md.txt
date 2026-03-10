@@ -2,6 +2,13 @@
 All notable changes to Ruby Market Scanner are documented here.
 
 
+###[1.5.4] - 2026-03-10
+### Upgraded
+-Created premium header
+-Altered scan to return top 5 bullish in print and top 1 in chart output
+-added 400 symbols/crypto to list
+
+
 ### [1.5.3] - 2026-03-09
 ### Upgraded
 = Created a premium copy of Ruby that adds a market scanning option for people who choose to pay for the alpha vantage api calls
