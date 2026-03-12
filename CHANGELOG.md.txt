@@ -2,6 +2,26 @@
 All notable changes to Ruby Market Scanner are documented here.
 
 
+
+###[1.5.6] – 2026‑03‑12
+### Fixed
+- Eliminated vertical spike artifacts in charts by implementing masked‑array handling for all indicators (RSI, MACD, ATR, Bollinger).
+- Corrected Bollinger Band rendering to avoid drawing across invalid or nan regions.
+- Fixed ATR band distortion caused by early‑series nan values.
+- Resolved MACD/Signal/Histogram zero‑line artifacts by masking incomplete EMA windows.
+- Cleaned Coinbase intraday data pipeline to remove malformed candles and stabilize indicator inputs.
+### Improved
+- Upgraded chart renderer to professional‑grade stability with full invalid‑value masking.
+- Enhanced Bollinger Band plotting with validated index masking and consistent z‑ordering.
+- Improved ATR shading and outline logic using masked arrays for clean transitions.
+- Refined volume subplot scaling behavior for clearer visual interpretation.
+- Strengthened indicator pipeline alignment with cleaned candle data.
+### Added
+- Robust wick‑based outlier detection for crypto candles to prevent ATR/BB contamination.
+- Composite signal engine now produces coherent, stable bias and confidence scoring.
+- VWAP integration now fully stable across all cadences.
+
+
 ###[1.5.5] -2026-03-11
 ### Upgraded
 -Integrated Coinbase into API fetching ability for better crypto analysis (if desired)
