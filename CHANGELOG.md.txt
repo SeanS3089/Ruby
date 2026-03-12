@@ -1,7 +1,10 @@
 # Changelog
 All notable changes to Ruby Market Scanner are documented here.
 
-
+###[1.5.7] 2026-03-12
+### Fixed 
+- Error scanning stock symbols with Alpha Vantage API
+- Added skip note to unsupported symbols
 
 ###[1.5.6] – 2026‑03‑12
 ### Fixed
