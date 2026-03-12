@@ -2,6 +2,14 @@
 All notable changes to Ruby Market Scanner are documented here.
 
 
+###[1.5.5] -2026-03-11
+### Upgraded
+-Integrated Coinbase into API fetching ability for better crypto analysis (if desired)
+-Fixed crashes on unsupported symbols by silently passing them
+-Now uses Alpha Vantage for stock info (and optionally crypto but only on a dialy cadence)
+-Coinbase for crypto (via a toggle button)
+-Added Cadence dropdown selector for various options, 5/15/30/60 minutes
+
 ###[1.5.4] - 2026-03-10
 ### Upgraded
 -Created premium header
