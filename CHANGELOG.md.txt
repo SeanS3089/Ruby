@@ -2,6 +2,56 @@
 All notable changes to Ruby Market Scanner are documented here.
 
 
+
+###[1.5.9]
+
+###Upgraded
+
+###New Features
+Composite Signals for Top 5 Assets
+Ruby now prints a composite signal summary for all Top 5 bullish assets, not just the strongest one.
+This gives users a clearer, more comparative view of market conditions across leading candidates.
+Aligned Composite Table
+Composite signal output is now column‑aligned for improved readability:
+- Symbols left‑aligned
+- Composite bias left‑aligned
+- Confidence values consistently formatted
+This creates a clean, professional terminal table that’s easy to scan.
+Color‑Coded Composite Bias
+Composite rows now use color‑coding based on bias:
+- Green → Bullish Bias
+- Red → Bearish Bias
+- Neutral → Neutral or mixed signals
+This visual layer makes trend interpretation faster and more intuitive.
+
+###Structural Improvements
+Clarification Between Ranking Score & Composite Signal
+Added a clear explanatory block:
+- Ranking Score compares assets against each other
+- Composite Signal measures indicator agreement within a single asset
+This prevents confusion when a top‑ranked asset has a neutral or low‑confidence composite reading.
+Cleaned Up Output Logic
+- Removed duplicated on_scan_complete definitions
+- Removed duplicated auto‑chart blocks
+- Ensured composite block prints once, outside the Top‑5 loop
+- Ensured indentation and flow are correct and stable
+
+###User Experience Improvements
+- Output is now more structured and readable
+- Strongest asset still auto‑charts after scan completion
+- Composite table appears immediately after the Top‑5 list
+- Messaging is clearer, more consistent, and more professional
+
+###Summary
+This update significantly improves Ruby’s scan output clarity, visual polish, and interpretability.
+Users now get:
+- A ranked list
+- A color‑coded composite table
+- A clear explanation of how the systems differ
+- A detailed snapshot of the strongest asset
+
+
+
 ###[1.5.8] 2026-03-13
 
 ###Fixed
