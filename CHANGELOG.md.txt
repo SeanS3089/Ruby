@@ -1,6 +1,21 @@
 # Changelog
 All notable changes to Ruby Market Scanner are documented here.
 
+
+###[1.5.8] 2026-03-13
+
+###Fixed
+- Corrected PyInstaller output path mismatch that caused the installer to fail when copying application files.
+- Updated Inno Setup [Files] section to reference the actual ONEDIR build directory (Ruby_GUI\*) instead of the non‑existent dist\Ruby_GUI\*.
+- Resolved missing _internal runtime folder in installed builds, which previously caused python311.dll load failures.
+- Eliminated EXE startup crashes and CMD flash behavior by ensuring the full ONEDIR runtime is bundled and installed correctly.
+
+###Improved
+- Build pipeline now produces a complete, stable ONEDIR distribution suitable for packaging and distribution.
+- Installer now reliably deploys all required Python, Tcl/Tk, and dependency DLLs.
+- Application launch is now clean and silent with no console flashes
+
+
 ###[1.5.7] 2026-03-12
 ### Fixed 
 - Error scanning stock symbols with Alpha Vantage API
