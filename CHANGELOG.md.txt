@@ -1,6 +1,37 @@
 # Changelog
 All notable changes to Ruby Market Scanner are documented here.
 
+###CHANGELOG.md — v1.6.0 (2026‑03‑13)
+[1.6.0] – 2026‑03‑13
+
+Added
+- Weighted Composite Engine
+Introduced a full agreement‑based weighting system for all indicators (MACD, slopes, VWAP, RSI, BB, ATR trend).
+Each indicator now contributes a weighted bullish/bearish polarity, producing a smooth, expressive confidence score (e.g., 72.5% instead of binary 0/100).
+- Composite Reason Narrative
+Composite output now includes a detailed explanation of which indicators contributed to the bias and their weights (e.g., “MACD bullish (w3); Long‑term slope bullish (w3)”).
+- Unified Composite Extractor (compute_composite)
+Standardized access to composite bias, confidence, and reasoning across the entire GUI and scan pipeline.
+
+Improved
+- GUI Output Consistency
+The Top‑5 section now displays only the weighted composite signals, removing the old “Top 5 Bullish Assets” block to avoid duplication and confusion.
+Composite confidence in the GUI now matches the detailed snapshot exactly.
+- Scan Pipeline Integration
+Weighted composite computation is now executed during the scan loop, ensuring every asset has fully populated composite fields before GUI rendering.
+- SignalBundle Enhancements
+SignalBundle now stores weighted composite fields (composite_bias, composite_confidence, composite_reason, composite_confidence_note) as first‑class outputs.
+- Architectural Cleanup
+Moved polarity scoring and composite logic into the interpreter layer, keeping GUI and engine responsibilities cleanly separated.
+
+Fixed
+- Incorrect 100% Confidence in Top‑5 Table
+Resolved an issue where the GUI displayed 100.0% for all assets due to reading pre‑composite fields.
+Now correctly reflects weighted composite confidence.
+- Duplicate Composite Header in GUI
+Removed redundant header and ensured a single, clean “Composite Signals for Top 5” section.
+- Import Errors
+Fixed missing score_note_polarity reference by colocating polarity logic with the composite engine.
 
 
 ###[1.5.9]
