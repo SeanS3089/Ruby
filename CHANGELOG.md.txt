@@ -1,6 +1,88 @@
 # Changelog
 All notable changes to Ruby Market Scanner are documented here.
 
+### Ruby v1.6.2 — Yahoo Migration, Alpha Removal, and Zero‑Credential Crypto/Stock Scanning
+Released: March 2026
+Ruby 1.6.2 is a major architectural upgrade that fully removes all Alpha Vantage dependencies, introduces a modern Yahoo Finance data pipeline, and enables frictionless crypto scanning using Coinbase’s public market data — no API keys required. This release dramatically improves onboarding, stability, and long‑term maintainability.
+
+New Features
+• Full Yahoo Finance Integration (Stocks + ETFs)
+Ruby now uses Yahoo Finance as the primary provider for all equities:
+- Intraday OHLCV (1m, 5m, 15m, 30m, 60m)
+- Daily OHLCV fallback
+- Clean, normalized candle format
+- Zero API keys required
+- Faster, more stable, and more reliable than Alpha Vantage
+• Zero‑Credential Crypto Scanning (Coinbase Public API)
+Crypto scanning now works out‑of‑the‑box:
+- No API keys needed
+- No onboarding friction
+- No authentication errors
+- Clean intraday candles from Coinbase public endpoints
+- Perfectly normalized to match Yahoo’s structure
+This dramatically improves first‑run experience for new users.
+
+Improvements
+• Complete Removal of Alpha Vantage
+All Alpha‑era components have been fully removed:
+- DataFetcher
+- alpha_client
+- Alpha normalization functions
+- Alpha routing logic
+- Alpha GUI references
+- Alpha installer fields
+Ruby is now 100% Alpha‑free.
+• Unified Candle Normalization Layer
+All providers now feed into a single, consistent candle format:
+{
+  "timestamp": ...,
+  "open": ...,
+  "high": ...,
+  "low": ...,
+  "close": ...,
+  "volume": ...
+}
+This powers a cleaner, more stable indicator pipeline.
+• Robust Candle Filtering
+Added safeguards to remove malformed Yahoo candles:
+- Filters out None OHLC values
+- Removes zero‑value candles
+- Sorts by timestamp
+- Median‑based spike removal for Coinbase quirks
+This prevents RSI/MACD crashes and ensures indicator stability.
+• GUI Routing Updated to Match Scan Pipeline
+The “Run Ruby Once” button now uses the same provider logic as the full scan:
+- Yahoo intraday → daily fallback
+- Coinbase for crypto
+- No Alpha references
+- No undefined variables (fetcher removed)
+• Cleaner Logging & Debug Output
+- Clear provider routing messages
+- Graceful handling of unsupported Yahoo tickers
+- Debug prints for spike removal
+- Cleaner scan summaries
+
+Bug Fixes
+- Fixed ModuleNotFoundError: data_fetcher by removing all Alpha imports
+- Fixed NameError: fetcher in GUI snapshot mode
+- Fixed RSI crash caused by NoneType candles
+- Fixed VWAP divide‑by‑zero warnings
+- Fixed inconsistent symbol normalization for crypto
+- Fixed GUI freeze when Yahoo intraday failed
+- Fixed BRK.B, WBA, PARA, ATVI, HEXO, WISH handling (unsupported tickers now skipped cleanly)
+
+Result
+Ruby 1.6.2 is faster, cleaner, and dramatically easier to onboard:
+- No API keys required for stocks
+- No API keys required for crypto
+- No Alpha Vantage throttling
+- No credential setup friction
+- Unified provider architecture
+- Stable indicators across all assets
+This is the most polished and user‑friendly version of Ruby to date.
+
+
+
 ###CHANGELOG.md — v1.6.0 (2026‑03‑13)
 [1.6.0] – 2026‑03‑13
 
