@@ -1,6 +1,53 @@
 # Changelog
 All notable changes to Ruby Market Scanner are documented here.
 
+### Ruby Market Scanner — v1.6.3
+Licensing Pipeline Stabilization + GUI Integration Fixes
+Release Date: 2026‑03‑18
+Overview
+v1.6.3 finalizes the transition to Ruby’s new unified licensing system.
+This release replaces all legacy validation paths, aligns the GUI with the new machine‑lock workflow, and resolves installer/EXE mismatches caused by stale PyInstaller bundles. The result is a clean, deterministic activation flow that works identically across development, installer builds, and end‑user systems.
+
+Key Improvements
+1. Unified Licensing Integration (GUI + Backend)
+- Replaced deprecated validate_license() entry point with the new verify_machine_lock() pipeline.
+- Updated GUI startup logic to correctly load:
+- email
+- license_key from installer‑generated config.json.
+- Removed all references to the old AlphaVantage‑era licensing functions.
+2. Restored Compatibility Functions
+- Reintroduced verify_license() as a lightweight config‑based validator.
+- Ensures GUI compatibility without reintroducing legacy logic.
+- Normalizes whitespace, casing, and malformed config files.
+3. Machine‑Lock System Finalization
+- Added missing timedelta import.
+- Ensured deterministic trial creation on first launch.
+- Clean handling of:
+- trial active
+- trial expired
+- full license
+- wrong license
+- machine mismatch
+4. Installer + EXE Synchronization
+- Fixed stale _internal module issues by enforcing clean PyInstaller builds.
+- Ensured installer‑embedded license is always written correctly to:
+%APPDATA%/Ruby/config.json
+- Added newline‑safe parsing for embedded_license.txt.
+
+Bug Fixes
+- Fixed ValueError: too many values to unpack caused by outdated load_license_from_config().
+- Fixed ImportError: cannot import name 'verify_machine_lock' due to stale bundled modules.
+- Fixed NameError: timedelta not defined in the machine‑lock handler.
+- Fixed GUI showing “Invalid License” even when config.json was correct.
+- Fixed installer parsing edge cases involving missing newline at EOF.
+
+Developer Notes
+- PyInstaller builds must now use --clean to avoid stale licensing modules.
+- The licensing system is now fully installer‑driven — no more settings.py.
+- Trial and full‑license logic now share a single, predictable code path.
+
+
+
 ### Ruby v1.6.2 — Yahoo Migration, Alpha Removal, and Zero‑Credential Crypto/Stock Scanning
 Released: March 2026
 Ruby 1.6.2 is a major architectural upgrade that fully removes all Alpha Vantage dependencies, introduces a modern Yahoo Finance data pipeline, and enables frictionless crypto scanning using Coinbase’s public market data — no API keys required. This release dramatically improves onboarding, stability, and long‑term maintainability.
