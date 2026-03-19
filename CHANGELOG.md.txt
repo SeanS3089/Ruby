@@ -1,6 +1,37 @@
 # Changelog
 All notable changes to Ruby Market Scanner are documented here.
 
+
+### Ruby v1.6.4 — Unified Cadence Engine & Correct Intraday Behavior
+Ruby 1.6.4 delivers a major quality‑of‑life improvement to intraday analysis by unifying cadence handling across the entire application. SEARCH and SCAN now use the same cadence vocabulary, the same Coinbase granularity mapping, and the same historical window depth — producing consistent, accurate charts and indicator outputs across all timeframes.
+This release fixes a subtle but impactful mismatch between GUI cadence values and backend provider mappings, ensuring that 1m/5m/15m/30m/60m all resolve to the correct Coinbase granularities. As a result, Ruby now displays properly shifting intraday structure for crypto assets across all cadences.
+
+What’s New
+• Unified cadence normalization
+The GUI now normalizes cadence values ("1m", "5m", "15m", "30m", "60m") into a consistent internal format used across all providers.
+• Expanded Coinbase granularity mapping
+cadence_to_coinbase() now supports both "1m" and "1min" style inputs, eliminating the mismatch between SEARCH and SCAN.
+• Correct intraday behavior for crypto
+SEARCH now requests the correct Coinbase granularity for all cadences, fixing the issue where 60m searches defaulted to 5m data.
+• Consistent candle windows across SEARCH and SCAN
+Both paths now fetch equivalent historical depth, ensuring charts and indicators shift meaningfully between timeframes.
+
+Bug Fixes
+- Fixed a cadence mismatch where SEARCH used "60m" but the backend expected "60min", causing incorrect granularity selection.
+- Corrected Coinbase granularity fallback behavior (no more silent defaults to 5m).
+- Improved debug output to show true candle counts instead of dict key counts.
+- Normalized cadence strings to prevent GUI → backend drift.
+
+Impact
+Ruby now produces:
+- accurate intraday charts
+- correct indicator calculations
+- meaningful differences between 1m/5m/15m/60m
+- consistent behavior between SEARCH and SCAN
+This release dramatically improves Ruby’s reliability as a technical analysis tool, especially for crypto assets where cadence matters most.
+
+
+
 ### Ruby Market Scanner — v1.6.3
 Licensing Pipeline Stabilization + GUI Integration Fixes
 Release Date: 2026‑03‑18
