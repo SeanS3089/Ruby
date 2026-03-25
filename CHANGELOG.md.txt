@@ -2,6 +2,19 @@
 All notable changes to Ruby Market Scanner are documented here.
 
 
+### v1.6.4 — Debugged Coinbase Stock‑Search Guardrail & UX Refinements
+Added
+- Added a protective UX warning when users attempt to search for stocks or ETFs while the Coinbase data source is selected.
+- Prevents silent failures caused by routing non‑crypto symbols into the Coinbase pipeline.
+- Provides a clear explanation and corrective action (“Uncheck Coinbase to search equities”).
+Improved
+- Cleaned and consolidated the on_search() logic to remove duplicate normalization blocks and fix indentation drift.
+- Ensured crypto symbol normalization (XYZ → XYZUSD) only occurs after the stock‑search guardrail passes.
+- Strengthened overall search‑path clarity and reduced user confusion around symbol routing.
+Result
+Ruby now handles mixed asset searches with clearer intent, safer defaults, and a smoother user experience — especially for users switching between equities and crypto.
+
+
 ### Ruby v1.6.4 — Unified Cadence Engine & Correct Intraday Behavior
 Ruby 1.6.4 delivers a major quality‑of‑life improvement to intraday analysis by unifying cadence handling across the entire application. SEARCH and SCAN now use the same cadence vocabulary, the same Coinbase granularity mapping, and the same historical window depth — producing consistent, accurate charts and indicator outputs across all timeframes.
 This release fixes a subtle but impactful mismatch between GUI cadence values and backend provider mappings, ensuring that 1m/5m/15m/30m/60m all resolve to the correct Coinbase granularities. As a result, Ruby now displays properly shifting intraday structure for crypto assets across all cadences.
