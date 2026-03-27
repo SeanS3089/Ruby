@@ -2,6 +2,34 @@
 All notable changes to Ruby Market Scanner are documented here.
 
 
+### v1.6.5 — Yahoo Intraday Integration & Coinbase Stock‑Search Guardrail
+Added
+- Coinbase stock‑search warning
+Ruby now alerts users when attempting to search for equities while the Coinbase data source is selected.
+Prevents silent failures and clarifies that Coinbase supports crypto only.
+Improved
+- Yahoo Finance intraday support fully enabled
+Fixed interval mismatch (1m, 5m, 15m, 30m, 60m) so Ruby now fetches true intraday OHLCV for equities.
+This unlocks:
+- real VWAP
+- real slopes
+- real MACD/RSI
+- real ATR
+- real Bollinger Bands
+- real multi‑timeframe structure
+- correct divergence between 1m/5m/15m/30m/60m snapshots
+- Search pipeline cleanup
+Removed duplicated normalization logic and corrected indentation drift in on_search().
+Ensures clean routing and consistent symbol handling.
+- Provider‑aware routing hardened
+Stocks now reliably route to Yahoo intraday; crypto routes to Coinbase with correct granularity mapping.
+Fixed
+- Bug where all stock cadences returned identical snapshots due to Yahoo interval mismatch.
+- VWAP, slopes, and volatility metrics now compute correctly across all timeframes.
+Result
+Ruby now delivers accurate, multi‑timeframe equity analysis with proper intraday candles, clearer UX around data‑source limitations, and a more predictable, polished search experience.
+
+
 ### v1.6.4 — Debugged Coinbase Stock‑Search Guardrail & UX Refinements
 Added
 - Added a protective UX warning when users attempt to search for stocks or ETFs while the Coinbase data source is selected.
