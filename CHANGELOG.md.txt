@@ -2,6 +2,19 @@
 All notable changes to Ruby Market Scanner are documented here.
 
 
+## [1.6.5] – 2026‑03‑30
+### Added
+- Added a user‑facing warning when selecting **30‑minute cadence** while crypto scanning is enabled.
+  - Coinbase does not provide 30‑minute granularity for crypto candles.
+  - Ruby now alerts the user instead of silently failing or producing empty results.
+
+### Fixed
+- Prevented Ruby from attempting unsupported 30‑minute crypto scans, which previously caused confusing “no data” behavior.
+
+### Notes
+- This update does **not** modify Ruby’s prediction logic or scan engine.
+- This was a small UX‑safety patch to prevent invalid cadence selections during crypto workflows.
+
 ### v1.6.5 — Yahoo Intraday Integration & Coinbase Stock‑Search Guardrail
 Added
 - Coinbase stock‑search warning
