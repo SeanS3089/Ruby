@@ -1,6 +1,82 @@
 # Changelog
 All notable changes to Ruby Market Scanner are documented here.
 
+## [1.6.6] – 2026‑04‑08
+-Major Update — Lifetime License Edition & Stability Overhaul
+-Added
+-Lifetime License Model  
+-Ruby no longer requires activation, license keys, machine locks, or environment variables.
+
+-Removed all license validation logic
+
+-Removed machine‑binding system
+
+-Removed .env handling and dotenv dependency
+
+--Ruby now launches instantly with no prompts or checks
+
+## Clean Installer Workflow  
+-The installer has been rebuilt for frictionless distribution.
+
+-No license prompts
+
+-No hidden files
+
+-Minimal config footprint
+
+-Ideal for Etsy distribution and non‑technical users
+
+## Improved
+-Startup Stability  
+-Ruby now opens cleanly with no console window and no dependency errors.
+
+-Ensured console=False in PyInstaller build
+
+-Removed leftover dotenv imports that previously caused EXE crashes
+
+-Cleaned .spec file to remove unused data bundles
+
+## Environment Cleanup  
+-Introduced a fresh ruby311 environment for long‑term stability.
+
+-Removed unused packages
+
+-Ensured tkinter availability
+
+-Ensured PyInstaller compatibility with Python 3.11
+
+## Installer & Build Pipeline
+
+-Rebuilt PyInstaller EXE under the new environment
+
+-Cleaned and simplified Inno Setup script
+
+-Removed legacy license file bundling
+
+-Reduced binary size and improved load time
+
+## Fixed
+-EXE Crash on Launch  
+-Caused by missing dotenv import after license removal.
+
+-Fully removed dotenv references
+
+-Ensured clean import path for all modules
+
+-Console Window Appearing on Launch
+
+-Corrected PyInstaller configuration
+
+-Ruby now launches as a proper GUI application with no CMD flash
+
+## Notes
+-This update focuses on stability, simplicity, and long‑term ownership.
+
+-Ruby is now a true one‑time purchase with no activation or online license checks.
+
+-All scanning, charting, and data‑fetching logic remains unchanged and stable.
+
+
 
 ## [1.6.5] – 2026‑03‑30
 ### Added
