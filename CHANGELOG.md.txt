@@ -1,6 +1,29 @@
 # Changelog
 All notable changes to Ruby Market Scanner are documented here.
 
+## [1.6.6] – 2026‑04‑08 (Bug Fix Patch)
+# Fixed
+30‑Minute Cadence Warning Triggering Incorrectly
+
+Corrected logic so the Coinbase 30‑minute cadence warning now appears immediately when the user selects 30min, not during scan execution.
+
+Warning now triggers only when Coinbase is enabled, preventing false alerts for stock/ETF scans.
+
+Added GUI event binding to ensure cadence validation occurs at selection time.
+
+Cadence Dropdown Event Handling
+
+Implemented <<ComboboxSelected>> binding for real‑time cadence validation.
+
+Ensured cadence_var is used as the authoritative source for raw interval selection.
+
+Improved UX Consistency
+
+Optional auto‑revert to 15min added to prevent invalid Coinbase cadence states.
+
+
+
+
 ## [1.6.6] – 2026‑04‑08
 -Major Update — Lifetime License Edition & Stability Overhaul
 -Added
