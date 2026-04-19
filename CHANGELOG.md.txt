@@ -1,6 +1,23 @@
 # Changelog
 All notable changes to Ruby Market Scanner are documented here.
 
+### [1.6.7] – 2026‑04‑19
+## Added
+-Added WSL‑aware Mist integration detection for users running Linux Ollama.
+-Added automatic API‑health check before sending Mist requests.
+-Added clearer error messages when Mist is unreachable or misconfigured.
+
+## Improved
+-Improved hybrid pipeline stability for crypto tickers with inconsistent weekend data.
+-Improved JSON‑strict mode for Mist V13, reducing malformed responses.
+-Improved GUI callback safety to prevent undefined‑variable crashes during rapid input changes.
+
+## Fixed
+-Fixed rare bug where scan button became unresponsive after Mist timeout.
+-Fixed Coinbase cadence validation edge case when switching between crypto and equities.
+-Fixed Yahoo fallback logic for crypto tickers that should never route to Yahoo.
+
+
 ## [1.6.6] – 2026‑04‑08 (Bug Fix Patch)
 # Fixed
 30‑Minute Cadence Warning Triggering Incorrectly
