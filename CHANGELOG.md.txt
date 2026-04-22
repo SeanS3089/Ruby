@@ -1,6 +1,39 @@
 # Changelog
 All notable changes to Ruby Market Scanner are documented here.
 
+## [1.6.8] – 2026‑04‑22
+## Added
+-Full Mist V13 + AWQ compatibility, including automatic device‑safe routing for quantized Qwen2 models.
+
+-Two‑stage Mist handshake validation, ensuring Stage‑1 context requests and Stage‑2 analysis are always correctly sequenced.
+
+-Automatic JSON‑serialization enforcement for Mist messages, preventing Python‑repr leakage into the LLM pipeline.
+
+-Enhanced Mist health‑probe diagnostics, including curl‑style endpoint verification and clearer GUI‑level error surfacing.
+
+-Fast‑path inference mode for AWQ models, enabling sub‑5‑second hybrid analysis on RTX‑50‑series GPUs.
+
+## Improved
+-Tokenizer/device alignment for AWQ models, eliminating .device attribute crashes and ensuring consistent CUDA placement.
+
+-Hybrid analysis stability across all supported tickers, with improved handling of deep‑context requests and multi‑stage responses.
+
+-GUI logging clarity, including explicit Stage‑1/Stage‑2 dumps and normalized symbol/interval traces.
+
+-News‑context injection reliability, reducing malformed or partial sentiment blocks during high‑latency API windows.
+
+## Fixed
+-Resolved AWQ .device crash by replacing model.device with safe parameter‑based device detection.
+
+-Fixed Stage‑2 JSON parsing failures caused by Python repr strings instead of valid JSON.
+
+-Eliminated silent 500‑errors from Mist by enforcing UTF‑8‑safe serialization and strict message formatting.
+
+-Corrected rare GUI freeze when Mist returned partial responses during deep‑context runs.
+
+-Fixed ticker‑misalignment edge case where Stage‑1 symbol inference could override user‑provided symbols.
+
+
 ### [1.6.7] – 2026‑04‑19
 ## Added
 -Added WSL‑aware Mist integration detection for users running Linux Ollama.
